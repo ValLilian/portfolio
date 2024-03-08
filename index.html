@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vallienne Lilian</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        
+        canvas {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: rgb(0, 255, 255);
+            font-size: 6em;
+            text-align: center;
+        }
+
+        #github-logo {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            z-index: 1;
+            width: 50px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="content">
+        <p>Soon</p>
+    </div>
+    <a href="https://github.com/ValLilian/portfolio">
+        <img id="github-logo" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo">
+    </a>
+    <script>
+        // JavaScript for matrix background
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        // Set canvas size
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        // Characters that will be randomly chosen to create the matrix effect
+        var characters = '01';
+
+        // Column configuration
+        var font_size = 10;
+        var columns = canvas.width / font_size;
+
+        // An array of drops - one per column
+        var drops = [];
+
+        // Initialize drops
+        for (var x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        // Draw the matrix effect
+        function drawMatrix() {
+            // Black BG for the canvas
+            // translucent BG to show trail
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = '#0F0'; // green text
+            ctx.font = font_size + 'px arial';
+
+            // Loop over each drop
+            for (var i = 0; i < drops.length; i++) {
+                var text = characters.charAt(Math.floor(Math.random() * characters.length));
+                ctx.fillText(text, i * font_size, drops[i] * font_size);
+
+                // Randomly reset drops if they go off the screen
+                if (drops[i] * font_size > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                // Increment drops to create animation
+                drops[i]++;
+            }
+        }
+
+        // Animation loop
+        function animate() {
+            drawMatrix();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
