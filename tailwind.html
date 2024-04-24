@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tailwind</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* Masquer la barre de défilement */
+        body {
+            overflow-y: scroll;
+        }
+
+        /* Astuce pour masquer la barre de défilement */
+        body::-webkit-scrollbar {
+            width: 0;
+            background: transparent; /* Optionnel : pour masquer la barre de défilement dans Chrome */
+        }
+    </style>
+</head>
+<body>
+<section class="ml-20 mr-20 py-20 bg-white a-propos">
+    <div class="flex flex-wrap -mx-3">
+        <!-- Première section -->
+        <div class="flex h-column h-column-container flex-col lg:w-1/3 md:w-1/2 w-full px-3 mb-4">
+            <div class="flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                <div class="w-full flex items-center justify-center">
+                </div>
+                <div class="mt-2">
+                    <h6 class="text-xl font-semibold text-center">Introduction</h6>
+                </div>
+                <div class="mt-3">
+                    <p class="text-base text-justify text-gray-700">Tailwind CSS est un framework CSS moderne qui gagne en popularité dans le monde du développement web. Contrairement à d'autres frameworks CSS qui fournissent des composants prédéfinis, Tailwind CSS se concentre sur la création d'interfaces utilisateur personnalisées en utilisant une approche basée sur les classes utilitaires. Cette approche permet une flexibilité et une personnalisation maximales, tout en offrant un code CSS maintenable et évolutif.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deuxième section -->
+        <div class="flex h-column h-column-container flex-col lg:w-1/3 md:w-1/2 w-full px-3 mb-4">
+            <div class="flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                <div class="w-full flex items-center justify-center">
+                </div>
+                <div class="mt-2">
+                    <h6 class="text-xl font-semibold text-center">Objectif de la veille :</h6>
+                </div>
+                <div class="mt-3">
+                    <p class="text-base text-justify text-gray-700">L'objectif de cette veille technologique est de suivre de près les dernières évolutions, les meilleures pratiques et les ressources pertinentes liées à Tailwind CSS. En restant informé des mises à jour, des tutoriels, des exemples de projets, des extensions et des tendances de l'industrie, nous pourrons améliorer nos compétences dans l'utilisation de ce framework et tirer le meilleur parti de ses fonctionnalités pour concevoir des interfaces utilisateur modernes et réactives.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Troisième section -->
+        <div class="flex h-column h-column-container flex-col lg:w-1/3 md:w-1/2 w-full px-3 mb-4">
+            <div class="flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                <div class="w-full flex items-center justify-center">
+                </div>
+                <div class="mt-2">
+                    <h6 class="text-xl font-semibold text-center">Exemple :</h6>
+                </div>
+                <div class="mt-3">
+                    <p class="text-base text-justify text-gray-700">
+                        En me tenant régulièrement à jour sur cette technologie, je peux rapidement intégrer les dernières fonctionnalités dans mes projets. Cela signifie que je suis en mesure de produire des interfaces utilisateur plus efficacement, en évitant les tâches fastidieuses de création et de gestion manuelle du CSS. Ainsi, lors du développement de l'application desktop pour notre projet Fast Sushi, j'ai pu utiliser les classes utilitaires de Tailwind CSS pour styliser rapidement et efficacement chaque composant, tout en conservant un code propre et maintenable. De même, lors de la conception de l'interface web pour Enedis, ainsi que mon portfolio.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex h-column h-column-container flex-col lg:w-1/3 md:w-1/2 w-full px-3 mb-4">
+            <div class="flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                <div class="w-full flex items-center justify-center">
+                </div>
+                <div class="mt-2">
+                    <h6 class="text-xl font-semibold text-center">Page de login de l'application desktop Fast_SUSHI :</h6>
+                </div>
+                <div class="mt-3 w-full flex items-center justify-center">
+                    <img class="" src="Fast_login.png" alt="Page de login de l'application desktop Fast_SUSHI">
+                </div>
+            </div>
+        </div>
+
+            <div class="flex h-1/2 flex-col lg:w-2/3 md:w-1/2 w-full px-3 mb-4">
+                <div class="flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                    <div class="w-full flex items-center justify-center">
+                    </div>
+                    <div class="mt-2">
+                        <h6 class="text-xl font-semibold text-center">Page "home" de l'application desktop Fast_SUSHI :</h6>
+                    </div>
+                    <div class="mt-4 w-full flex items-center justify-center">
+                        <img class="" src="Fast_home.png" alt="Page de login de l'application desktop Fast_SUSHI">
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-col flex-grow p-3 relative bg-white border border-gray-200 rounded shadow">
+                    <div class="w-full flex items-center justify-center">
+                    </div>
+                    <div class="mt-2">
+                        <h6 class="text-xl font-semibold text-center">Mes sources et lien de formation :</h6>
+                        <a href="https://tailwindcss.com/">Documentation officielle de TailWind</a><br>
+                        <a href="https://youtu.be/1BWN-A2QWgM?si=-4vUwLy27Nv0GTvp">Ma découverte de TailWind</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+</body>
+</html>
